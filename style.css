@@ -1,0 +1,82 @@
+body{
+    /*Text Position*/
+    position: absolute;
+    top: 0;
+    bottom: 100px;
+    left: 1000px;
+    right: 0;
+    /*grid*/
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+    /*Colors*/
+    background-color: black;
+
+
+}
+div{color: aquamarine;
+    text-shadow: 3px 5px 8px blue;
+}
+.about{
+        font-size: 2rem;
+        color: #046e8f;
+}
+.projects{
+    /*Position*/
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    /*Color*/
+    font-size: 3rem;
+    color: #38aecc;
+    font-weight: bold;
+    
+}
+.contact{
+    /*Position*/
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    /*Color*/
+    font-size: 4rem;
+    color: #183446;
+}
+
+.education{
+    font-size: 4.5rem;
+        color:aquamarine;
+}
+
+
+
+/*grid area*/
+.about{
+    grid-area:about;
+}
+.contact{
+    grid-area:contact;
+}
+.education{
+    grid-area: education;
+}
+.projects{
+    grid-area: projects;
+}
+/*grid-template*/
+body{ display: grid;
+    grid-template-areas:'...about projects projects projects projects'
+    '...contact education education education education';
+    
+}
+/*Avitar*/
+.avitar{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 135px;
+    bottom: 0;
+    left: 380px;
+    right: 90px;
+}
+
