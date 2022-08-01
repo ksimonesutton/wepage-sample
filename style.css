@@ -1,23 +1,39 @@
+
 body{
+    /*Colors*/
+    background-color: black;
+}
+.about-page{
     /*Text Position*/
     position: absolute;
     top: 0;
     bottom: 100px;
     left: 1000px;
     right: 0;
+    transform-style: preserve-3d;
+    perspective: 300px;
     /*grid*/
     display: grid;
     justify-content: center;
     align-content: center;
     gap: 5px;
-    /*Colors*/
-    background-color: black;
+
+}
+  
+
+.about-page{
+    color: bisque;
+}
+
+/*3D effect*/
+.about-page :hover{
+    text-shadow: 6px 10px 16px blueviolet;
+    transition: 0.25s;
+    
 
 
 }
-div{color: aquamarine;
-    text-shadow: 3px 5px 8px blue;
-}
+    
 .about{
         font-size: 2rem;
         color: #046e8f;
@@ -64,19 +80,115 @@ div{color: aquamarine;
     grid-area: projects;
 }
 /*grid-template*/
-body{ display: grid;
+.about-page{ display: grid;
     grid-template-areas:'...about projects projects projects projects'
     '...contact education education education education';
     
 }
+a { color: inherit; 
+    text-decoration: none;
+} 
 /*Avitar*/
 .avitar{
-    width: 250px;
-    height: 250px;
+    /*avatar position & Size*/
     position: absolute;
-    top: 135px;
-    bottom: 0;
-    left: 380px;
-    right: 90px;
+    top: 225px;
+    bottom: px;
+    left: 1400px;
+    right: 0;
+    width: 200px;
+    height: 200px;
+   
 }
+/*Contact Page Icons*/
+@import url("https://fonts.googleapis.com/css?family=Tangerine");
+*
+{   margin:0;
+    padding:0;
+    font-family: 'Tangerine';
+    box-sizing: border-box;
+    
+}
+/*Icon Positions*/
+.contact-info{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+
+    
+}
+.social-media{
+    display: flex;
+    position: absolute;
+    list-style: none;
+    top: 400px;
+    left: 250px;
+
+}
+/*Text Displayed*/
+.social-media li::before{
+content:attr(data-text);
+position: absolute;
+top: 50%;
+left: 50%;
+font-size: 50px;
+transform: translate(-50%,calc(-50% + 120px));
+pointer-events: none;
+font-weight: 700;
+transition: 0.5s;
+opacity: 0;
+color: aliceblue;
+}
+.social-media li:hover:before{
+    opacity: 0.1;
+    transform: translate(-50%,calc(-50% + 150px));
+
+
+}
+
+
+/*Individual Boxes*/
+.social-media li a{
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height:120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    text-decoration: none;
+    margin:20px;
+    font-size: 60px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    transition: background 0.25s ;
+    /*Color*/
+    background-color: white;
+    color: black;
+    box-shadow: 0 25px 35px white;
+
+}
+
+/*Hovering Over Icons Changing Block Color*/
+.social-media li a:hover.linkedin{
+    background: rgb(97, 97, 243);
+
+}
+
+.social-media li a:hover.github{
+    background: rgb(121, 120, 120);
+
+}
+.social-media li a:hover.gmail{
+    background: red;
+
+}
+.social-media li a:hover.phonenumber{
+    background: lightgreen;
+
+}
+
 
